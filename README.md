@@ -4,8 +4,8 @@ PHP Blogger
 PHP Blogger is a web-based application that allows users to register and log in to manage their own blog posts. This application is built using PHP, HTML, 
 and MySQL database.
 
+![php blogger](https://user-images.githubusercontent.com/116610989/232381261-2c29a81b-ed85-4b60-b3f8-da291109f0a8.png)
 
-Features![php blogger](https://user-images.githubusercontent.com/116610989/232379644-baa26a33-cc3b-42cd-953e-c1ab507cff00.png)
 
 User registration and login
 Create, Read, Update and Delete (CRUD) blog posts
