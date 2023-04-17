@@ -136,6 +136,7 @@ $query_run = mysqli_query($connection, $query);
         <div class="container-xxl">
             <div class="alert alert-success" role="alert">
            <?php echo "Record updated successfully";?>
+           
            <a class="btn btn-primary profile-button" href="profile.php" type="submit">Click here to see the effect</a>
         </div>
         </div><?php

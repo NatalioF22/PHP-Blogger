@@ -3,6 +3,7 @@
 session_start();
 
 if (isset($_SESSION["user_id"])) {
+    $user_id = $_SESSION['user_id'];
     $session_in = true;
     $mysqli = require __DIR__ . "/database.php";
     
@@ -65,15 +66,28 @@ if($session_in==false){
     <?php
         if($query_run){
     while ($row = mysqli_fetch_array($query_run)) {
+        
             ?>
             <div class="bg-secundary mb-3 border rounded-4 p-4">
         <h2 ><?php echo $row['content_header']; ?></h2>
         <hr>
         <p ><?php echo $row['content']; ?></p>
         <small class="text-muted">By <?php echo $row['author']; ?> | Posted on <?php echo $row['added_date']; ?></small>
+        <?php if($row["id"]==$user_id){?>
+        <div class="my-3">
+            <a href="update_post.php" id="<?php echo $row['id']?>" class="btn btn-info px-2 d-inline-block">Update</a>
+
+            <form action="delete_post.php" method="post" class="d-inline-block">
+                <input type="hidden" name="id" value="<?php echo $row['id'];?>">
+                <input type="submit" name = 'delete' value="DELETE"  class="btn btn-danger ">
+            </form>
         </div>
+        </div>
+       
     
         <?php
+        }
+        
     }}
     else{
     echo "No record found";

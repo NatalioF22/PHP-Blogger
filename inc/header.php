@@ -31,8 +31,8 @@
                         </ul>
                         <a class="navbar-brand" href="index.php">Home</a>
                         <a class="navbar-brand" href="profile.php">My Profile</a>
-                        <a href="post.php" class="navbar-brand bg-info rounded-3">Post</a>
-                        <a class="navbar-brand bg-danger rounded-3" href="logout.php">Log Out</a>
+                        <a href="post.php" class="navbar-brand bg-info rounded-3 ps-2 pe-2">Post</a>
+                        <a class="navbar-brand bg-danger rounded-3 ps-2 pe-3" href="logout.php">Log Out</a>
                       </div>
                     </div>
                   </nav>
