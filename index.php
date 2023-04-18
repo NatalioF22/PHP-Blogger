@@ -62,13 +62,13 @@ if($session_in==false){
             $query = "SELECT * FROM post ORDER BY $date";
             $query_run = mysqli_query($connection, $query);
             ?>
-
+<div class="bg-secundary mb-3 border rounded-4 p-4">
     <?php
         if($query_run){
     while ($row = mysqli_fetch_array($query_run)) {
         
             ?>
-            <div class="bg-secundary mb-3 border rounded-4 p-4">
+            
         <h2 ><?php echo $row['content_header']; ?></h2>
         <hr>
         <p ><?php echo $row['content']; ?></p>
@@ -81,7 +81,7 @@ if($session_in==false){
                 <input type="hidden" name="id" value="<?php echo $row['id'];?>">
                 <input type="submit" name = 'delete' value="DELETE"  class="btn btn-danger ">
             </form>
-        </div>
+            </div>
         </div>
        
     
